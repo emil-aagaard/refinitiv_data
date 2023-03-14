@@ -1,5 +1,5 @@
 from . import company_attributes
-from values import Value, get_unit
+from values import Value, ValueList, get_unit
 import refinitiv.request
 from datetime import datetime
 
@@ -112,7 +112,7 @@ class Company:
                 self.__dict__[attribute_key] = Value(None)
             
             elif attribute['type'] == 'value_list':
-                self.__dict__[attribute_key] = [Value(None) for _ in years]
+                self.__dict__[attribute_key] = ValueList([Value(None) for _ in years])
 
             elif attribute['type'] == 'value_map':
                 self.__dict__[attribute_key] = [[] for _ in years]

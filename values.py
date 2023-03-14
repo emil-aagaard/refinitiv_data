@@ -93,6 +93,68 @@ class Value:
                 new_unit = self.unit + '/' + value.unit
 
         return Value(new_value, new_unit)
+            
+
+class ValueList:
+    def __init__(self, values=[]):
+        self.values = [value for value in values]
+
+    def __repr__(self):
+        return str(self.values)
+
+    def __getitem__(self, index):
+        return self.values[index]
+    
+    def __setitem__(self, index, value):
+        if isinstance(value, Value):
+            self.values[index] = value
+
+        else:
+            raise TypeError(f'can only append Value objects, not {type(value)} objects')
+    
+    def __eq__(self, value_list):
+        return self.__dict__ == value_list.__dict__
+    
+    def __len__(self):
+        return len(self.values)
+    
+    def append(self, value):
+        if isinstance(value, Value):
+            self.values.append(value)
+
+        else:
+            raise TypeError(f'can only append Value objects, not {type(value)} objects')
+        
+    
+    def __add__(self, value_list):
+        new_value_list = ValueList()
+
+        for value_1, value_2 in zip(self.values, value_list.values):
+                new_value_list.append(value_1 + value_2)
+
+        return new_value_list
+    
+    def __sub__(self, value_list):
+        new_value_list = ValueList()
+
+        for value_1, value_2 in zip(self.values, value_list.values):
+                new_value_list.append(value_1 - value_2)
+
+        return new_value_list
+    
+    def __mul__(self, multiplier):
+        if isinstance(multiplier, int) or isinstance(multiplier, float) or isinstance(multiplier, Value):
+            return ValueList([value*multiplier for value in self.values])
+        
+        elif isinstance(multiplier, list) or isinstance(multiplier, ValueList):
+            return ValueList([value*factor for value, factor in zip(self.values, multiplier)])
+        
+    def __truediv__(self, divisor):
+        if isinstance(divisor, int) or isinstance(divisor, float) or isinstance(divisor, Value):
+            return ValueList([value/divisor for value in self.values])
+        
+        elif isinstance(divisor, list) or isinstance(divisor, ValueList):
+            return ValueList([value/factor for value, factor in zip(self.values, divisor)])
 
 
 def get_unit(values):

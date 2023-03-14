@@ -34,25 +34,26 @@
         "unit_type": "currency",
         "source": "refinitiv"
     },
-    "co2": {
-        "parameter": "TR.CO2EmissionTotal",
-        "name": "Total CO2 emissions",
+    "impairment_fixed_assets": {
+        "parameter": "TR.F.ImpairFixedAssets",
+        "name": "Impairment of fixed assests",
         "type": "value_list",
-        "unit_type": "unit",
+        "unit_type": "currency",
         "source": "refinitiv"
     },
-    "water_use": {
-        "parameter": "TR.AnalyticWaterUse",
-        "name": "Analytic water use",
+    "intangible_assets": {
+        "parameter": "TR.F.IntangAccumAmortTot",
+        "name": "Accumulated amortization and impairment",
         "type": "value_list",
-        "unit_type": "scale",
+        "unit_type": "currency",
         "source": "refinitiv"
     },
-    "has_esg": {
-        "parameter": "TR.HasESGCoverage",
-        "name": "Has ESG coverage",
-        "type": "other",
-        "unit_type": null,
+    "loan_losses": {
+        "parameter": "TR.F.ProvImpairForLoanLosses",
+        "name": "Provision and impairment for loan losses",
+        "type": "value_list",
+        "unit_type": "currency",
         "source": "refinitiv"
     }
+    
 }

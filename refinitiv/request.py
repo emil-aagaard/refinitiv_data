@@ -4,7 +4,7 @@ A module to execute requests to Refinitiv.
 
 from . import config
 from . import api
-from values import Value
+from values import Value, ValueList
 
 # suffixes of parameter strings
 formattable_period_str = config['formattable_period_str']
@@ -207,7 +207,7 @@ class Request:
                 year = int(date[:4])
                 output_dict[year] = Value(value, unit)
         
-        return list(output_dict.values())
+        return ValueList(output_dict.values())
 
     @staticmethod
     def get_value_map(segment_names, values, units, dates, years):
