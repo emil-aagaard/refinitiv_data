@@ -1,7 +1,16 @@
 {
     "analysis_attributes": [
-        "total_revenues",
-        "loan_losses",
-        "impairment_fixed_assets"
-    ]
+        "gas_emissions",
+        "ghg_intensity_changes",
+        "renewable_energy_ratios",
+        "total_energy_uses",
+        "water_emissions",
+        "hazardous_wastes",
+        "ungc_violations",
+        "oecd_guidelines",
+        "gender_pay_gap",
+        "board_gender_diversity",
+        "controversial_weapons"
+    ],
+    "analysis_path": "data/analysis.json"
 }

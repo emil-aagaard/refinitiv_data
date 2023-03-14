@@ -124,7 +124,6 @@ class ValueList:
 
         else:
             raise TypeError(f'can only append Value objects, not {type(value)} objects')
-        
     
     def __add__(self, value_list):
         new_value_list = ValueList()

@@ -50,4 +50,4 @@ def get_data(identifier, parameters):
         return df.fillna(nan).replace([nan], [None])
 
 if __name__ == '__main__':
-    df = get_data('DANSKE.CO', ['TR.F.ProvImpairForLoanLosses', 'TR.F.ProvImpairForLoanLosses.segmentName'])
+    df = get_data('AAPL.O', ['TR.MilitaryWeaponsorPersonnel'])

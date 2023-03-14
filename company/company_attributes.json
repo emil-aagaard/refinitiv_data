@@ -27,33 +27,81 @@
         "unit_type": null,
         "source": "refinitiv"
     },
-    "total_revenues": {
-        "parameter": "TR.F.TotRevenue",
-        "name": "Total revenue",
+    "gas_emissions": {
+        "parameter": "TR.CO2EmissionTotal",
+        "name": "CO2 equivalent gas emissions",
         "type": "value_list",
-        "unit_type": "currency",
+        "unit_type": "scale",
         "source": "refinitiv"
     },
-    "impairment_fixed_assets": {
-        "parameter": "TR.F.ImpairFixedAssets",
-        "name": "Impairment of fixed assests",
+    "ghg_intensity_changes": {
+        "parameter": "TR.AnalyticGHGEmissionsIntensityScope1and2YoYChg",
+        "name": "GHG intensity change",
         "type": "value_list",
-        "unit_type": "currency",
+        "unit_type": "scale",
         "source": "refinitiv"
     },
-    "intangible_assets": {
-        "parameter": "TR.F.IntangAccumAmortTot",
-        "name": "Accumulated amortization and impairment",
+    "renewable_energy_ratios": {
+        "parameter": "TR.AnalyticRenewEnergyUse",
+        "name": "Renewable energy ratio",
         "type": "value_list",
-        "unit_type": "currency",
+        "unit_type": "scale",
         "source": "refinitiv"
     },
-    "loan_losses": {
-        "parameter": "TR.F.ProvImpairForLoanLosses",
-        "name": "Provision and impairment for loan losses",
+    "total_energy_uses": {
+        "parameter": "TR.EnergyUseTotal",
+        "name": "Total energy use",
         "type": "value_list",
-        "unit_type": "currency",
+        "unit_type": "unit",
+        "source": "refinitiv"
+    },
+    "water_emissions": {
+        "parameter": "TR.WaterPollutantEmissions",
+        "name": "Water pollutant emissions",
+        "type": "value_list",
+        "unit_type": "scale",
+        "source": "refinitiv"
+    },
+    "hazardous_wastes": {
+        "parameter": "TR.HazardousWaste",
+        "name": "Hazardous waste",
+        "type": "value_list",
+        "unit_type": "unit",
+        "source": "refinitiv"
+    },
+    "ungc_violations": {
+        "parameter": "TR.UNGCViolationFlag",
+        "name": "UN global compact violation",
+        "type": "other",
+        "unit_type": null,
+        "source": "refinitiv"
+    },
+    "oecd_guidelines": {
+        "parameter": "TR.OECDGuidelinesMultiEnterprises",
+        "name": "Claims to follow OECD guidelines",
+        "type": "other",
+        "unit_type": null,
+        "source": "refinitiv"
+    },
+    "gender_pay_gap": {
+        "parameter": "TR.GenderPayGapPctage",
+        "name": "Gender pay gap",
+        "type": "value_list",
+        "unit_type": "unit",
+        "source": "refinitiv"
+    },
+    "board_gender_diversity": {
+        "parameter": "TR.AnalyticBoardFemale",
+        "name": "Board gender diversity",
+        "type": "value_list",
+        "unit_type": "unit",
+        "source": "refinitiv"
+    },
+    "controversial_weapons": {
+        "parameter": "TR.MilitaryWeaponsorPersonnel",
+        "name": "Chemical or biological weapons",
+        "type": "other",
+        "unit_type": null,
         "source": "refinitiv"
     }
-    
 }
