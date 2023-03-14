@@ -1,0 +1,10 @@
+{
+    "formattable_period_str": "(SDate=FY{},EDate=FY{},Frq=FY)",
+    "name_str": ".segmentName",
+    "date_str": ".periodenddate",
+    "unit_strs": {
+        "currency": ".currency",
+        "unit": ".unit",
+        "scale": ".scale"
+    }
+}
